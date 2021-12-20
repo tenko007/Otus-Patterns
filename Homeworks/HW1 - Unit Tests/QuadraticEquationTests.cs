@@ -76,13 +76,13 @@ namespace HW1___Unit_Tests
             QuadraticEquation equation;
             double a = double.NaN;
 
-            equation = new QuadraticEquation((double)a, 1, 1);
+            equation = new QuadraticEquation(a, 1, 1);
             Assert.Throws<NullReferenceException>(() => equation.Solve());
 
-            equation = new QuadraticEquation((double)1, a, 1);
+            equation = new QuadraticEquation(1, a, 1);
             Assert.Throws<NullReferenceException>(() => equation.Solve());
 
-            equation = new QuadraticEquation((double)1, 1, a);
+            equation = new QuadraticEquation(1, 1, a);
             Assert.Throws<NullReferenceException>(() => equation.Solve());
         }
 
