@@ -18,11 +18,7 @@ namespace HW1___QuadraticEquation
 
         public List<double> Solve()
         {
-            if (a.Equals(0)) throw new ArgumentOutOfRangeException();
-
-            if (a is double.NaN) throw new NullReferenceException();
-            if (b is double.NaN) throw new NullReferenceException();
-            if (c is double.NaN) throw new NullReferenceException();
+            CheckRules();
 
             List<double> result = new List<double>();
             double discriminant = Discriminant();
@@ -34,6 +30,15 @@ namespace HW1___QuadraticEquation
                 result.Add((-b - Math.Sqrt(discriminant)) / 2 * a);
 
             return result;
+        }
+
+        public void CheckRules()
+        {
+            if (a.Equals(0)) throw new ArgumentOutOfRangeException();
+
+            if (a is double.NaN) throw new NullReferenceException();
+            if (b is double.NaN) throw new NullReferenceException();
+            if (c is double.NaN) throw new NullReferenceException();
         }
 
         public double Discriminant()
