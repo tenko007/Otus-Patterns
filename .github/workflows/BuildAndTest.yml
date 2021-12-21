@@ -17,11 +17,13 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-        working-directory: ./Homeworks/
     - name: Restore dependencies
+      working-directory: ./Homeworks/
       run: dotnet restore
     - name: Build
+      working-directory: ./Homeworks/
       run: dotnet build --no-restore
     - name: Test
+      working-directory: ./Homeworks/
       run: dotnet test --no-build --verbosity normal
 
