@@ -9,7 +9,7 @@ namespace HW1___Unit_Tests
     public class QuadraticEquationTests
     {
         [Test]
-        public void Test1()
+        public void TestEquationReturnsNoRoots()
         {
             //Написать тест, который проверяет, что для уравнения x^2 + 1 = 0 корней нет(возвращается пустой массив)
             QuadraticEquation equation = new QuadraticEquation(1, 0, 1);
@@ -18,7 +18,7 @@ namespace HW1___Unit_Tests
         }
 
         [Test]
-        public void Test2()
+        public void TestEquationReturnsOneRoot()
         {
             //Написать тест, который проверяет, что для уравнения x^2-1 = 0 есть два корня кратности 1 (x1=1, x2=-1)
             QuadraticEquation equation = new QuadraticEquation(1, 0, -1);
@@ -30,7 +30,7 @@ namespace HW1___Unit_Tests
         }
 
         [Test]
-        public void Test3()
+        public void TestEquationReturnsTwoRoots()
         {
             //Написать тест, который проверяет, что для уравнения x^2+2x+1 = 0 есть один корень кратности 2 (x1= x2 = -1).
             QuadraticEquation equation = new QuadraticEquation(1, 2, 1);
@@ -50,7 +50,7 @@ namespace HW1___Unit_Tests
         }
 
         [Test]
-        public void Test5()
+        public void TestDiscriminantLessThanEpsilon()
         {
             //С учетом того, что дискриминант тоже нельзя сравнивать с 0 через знак равенства,
             //подобрать такие коэффициенты квадратного уравнения для случая одного корня кратности два,
@@ -67,24 +67,25 @@ namespace HW1___Unit_Tests
             Assert.That(result.Contains(0));
         }
 
-        [Test]
-        public void Test6()
+        public void TestNanReturnsException()
         {
             //Посмотреть какие еще значения могут принимать числа типа double,
             //кроме числовых и написать тест с их использованием на все коэффициенты. solve должен выбрасывать исключение.
 
             QuadraticEquation equation;
-            double a = double.NaN;
+            double[] nans = new double[] { double.NegativeInfinity, double.PositiveInfinity, double.NaN };
 
-            equation = new QuadraticEquation(a, 1, 1);
-            Assert.Throws<NullReferenceException>(() => equation.Solve());
+            foreach (double nan in nans)
+            {
+                equation = new QuadraticEquation(nan, 1, 1);
+                Assert.Throws<ArgumentOutOfRangeException>(() => equation.Solve());
 
-            equation = new QuadraticEquation(1, a, 1);
-            Assert.Throws<NullReferenceException>(() => equation.Solve());
+                equation = new QuadraticEquation(1, nan, 1);
+                Assert.Throws<ArgumentOutOfRangeException>(() => equation.Solve());
 
-            equation = new QuadraticEquation(1, 1, a);
-            Assert.Throws<NullReferenceException>(() => equation.Solve());
+                equation = new QuadraticEquation(1, 1, nan);
+                Assert.Throws<ArgumentOutOfRangeException>(() => equation.Solve());
+            }
         }
-
     }
 }
