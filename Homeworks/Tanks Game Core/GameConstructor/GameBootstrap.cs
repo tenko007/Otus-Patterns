@@ -12,6 +12,7 @@ namespace Tanks_Game_Core.GameEntities
         {
             GameObject player = new GameObject();
             player.AddComponent(new Transform());
+            player.AddComponent(new Tank());
         }
 
     }
