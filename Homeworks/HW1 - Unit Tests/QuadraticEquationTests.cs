@@ -42,7 +42,7 @@ namespace HW1___Unit_Tests
 
 
         [Test]
-        public void Test4()
+        public void TestFirstCoefficientCannotBeZero()
         {
             //Написать тест, который проверяет, что коэффициент a не может быть равен 0. В этом случае solve выбрасывает исключение. 
             QuadraticEquation equation = new QuadraticEquation(0, 1, 1);
