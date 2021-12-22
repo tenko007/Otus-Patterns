@@ -26,16 +26,5 @@ namespace Tanks_Game_Core
 
 			return default(T);
         }
-
-		public void Start()
-		{
-			foreach (IComponent component in Components)
-				component.Start();
-		}
-		public void Update()
-        {
-			foreach (IComponent component in Components)
-				component.Update();
-		}		
 	}
 }

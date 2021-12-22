@@ -38,15 +38,6 @@ namespace Tanks_Game_Core
             }
         }
         
-        public void Start()
-        {
-            throw new System.NotImplementedException();
-        }
-        public void Update()
-        {
-            throw new System.NotImplementedException();
-        }
-
         private void CheckRules(Vector3 vector)
         {
             float[] nums = new float[3] { vector.X, vector.Y, vector.Z };

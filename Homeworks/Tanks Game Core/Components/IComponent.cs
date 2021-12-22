@@ -7,7 +7,7 @@ namespace Tanks_Game_Core
 {
     public interface IComponent
     {
-		public void Start();
-		public void Update();
+		//public void Start();
+		//public void Update();
 	}
 }

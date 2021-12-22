@@ -8,14 +8,6 @@ namespace Tanks_Game_Core.GameEntities
 {
     public class Tank : IComponent
     {
-        public void Start()
-        {
-            throw new NotImplementedException();
-        }
 
-        public void Update()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
