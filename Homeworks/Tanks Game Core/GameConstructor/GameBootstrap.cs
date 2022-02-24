@@ -10,10 +10,20 @@ namespace Tanks_Game_Core.GameEntities
     {
         public void StartGame()
         {
+            InitUtils();
+            InitData();
+        }
+
+        public void InitUtils()
+        {
+            ErrorHandler.SetHandler(new LogErrorHandler());
+        }
+
+        public void InitData()
+        {
             GameObject player = new GameObject();
             player.AddComponent(new Transform());
             player.AddComponent(new Tank());
         }
-
     }
 }

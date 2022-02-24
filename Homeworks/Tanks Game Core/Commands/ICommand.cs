@@ -1,4 +1,6 @@
-﻿namespace Tanks_Game_Core
+﻿using System;
+
+namespace Tanks_Game_Core
 {
     public interface ICommand
 	{
