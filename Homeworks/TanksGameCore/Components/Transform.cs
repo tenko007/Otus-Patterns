@@ -9,6 +9,7 @@ namespace Tanks_Game_Core
         private Vector3 position;
         private Vector3 rotation;
         private Vector3 scale;
+        private Vector3 velocity;
 
         public Vector3 Position
         {
@@ -35,6 +36,15 @@ namespace Tanks_Game_Core
             {
                 CheckRules(value);
                 scale = value;
+            }
+        }
+        public Vector3 Velocity
+        {
+            get => velocity;
+            set
+            {
+                CheckRules(value);
+                velocity = value;
             }
         }
         
