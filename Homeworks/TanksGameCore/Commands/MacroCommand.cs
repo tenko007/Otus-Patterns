@@ -1,4 +1,7 @@
-﻿namespace Tanks_Game_Core
+﻿using System;
+using System.Collections.Generic;
+
+namespace Tanks_Game_Core
 {
 	public class MacroCommand : ICommand
 	{

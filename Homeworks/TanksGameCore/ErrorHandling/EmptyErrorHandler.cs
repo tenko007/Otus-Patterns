@@ -1,4 +1,5 @@
-﻿namespace Tanks_Game_Core;
+﻿using System;
+using Tanks_Game_Core;
 
 public class EmptyErrorHandler : IErrorHandler
 {

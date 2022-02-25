@@ -4,8 +4,6 @@ using System.Numerics;
 using NUnit.Framework;
 using Tanks_Game_Core;
 
-namespace Tanks_Game_Core___Tests;
-
 [TestFixture]
 public class ChangeVelocityCommandTests
 {
