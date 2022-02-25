@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>Tanks_Game_Core_Tests</RootNamespace>
         <Nullable>enable</Nullable>
 
         <IsPackable>false</IsPackable>
@@ -16,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Tanks Game Core\Tanks Game Core.csproj" />
+      <ProjectReference Include="..\TanksGameCore\TanksGameCore.csproj" />
     </ItemGroup>
 
 </Project>

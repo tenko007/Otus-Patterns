@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW1 - Unit Tests", "HW1 - Unit Tests\HW1 - Unit Tests.csproj", "{FF5AB18C-28D7-434D-B5A1-B36CA90232B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuadraticEquationTests", "QuadraticEquationTests\QuadraticEquationTests.csproj", "{FF5AB18C-28D7-434D-B5A1-B36CA90232B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW1 - QuadraticEquation", "HW1 - QuadraticEquation\HW1 - QuadraticEquation.csproj", "{F42D8DF0-676F-47BF-B96F-FB2822A1D4C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuadraticEquation", "QuadraticEquation\QuadraticEquation.csproj", "{F42D8DF0-676F-47BF-B96F-FB2822A1D4C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks Game Core Tests", "Tanks Game Core Tests\Tanks Game Core Tests.csproj", "{9157DF91-8115-485C-AF85-FCA33928B7BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TanksGameCore", "TanksGameCore\TanksGameCore.csproj", "{B976B036-45FE-4537-B958-34DF66813B3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks Game Core", "Tanks Game Core\Tanks Game Core.csproj", "{F51610E3-44AB-4254-8539-E27E0ED4280A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TanksGameCoreTests", "TanksGameCoreTests\TanksGameCoreTests.csproj", "{BA555A5D-0183-4D7E-9DB7-493E2495B1AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{F42D8DF0-676F-47BF-B96F-FB2822A1D4C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F42D8DF0-676F-47BF-B96F-FB2822A1D4C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F42D8DF0-676F-47BF-B96F-FB2822A1D4C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9157DF91-8115-485C-AF85-FCA33928B7BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9157DF91-8115-485C-AF85-FCA33928B7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9157DF91-8115-485C-AF85-FCA33928B7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9157DF91-8115-485C-AF85-FCA33928B7BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F51610E3-44AB-4254-8539-E27E0ED4280A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F51610E3-44AB-4254-8539-E27E0ED4280A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F51610E3-44AB-4254-8539-E27E0ED4280A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F51610E3-44AB-4254-8539-E27E0ED4280A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B976B036-45FE-4537-B958-34DF66813B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B976B036-45FE-4537-B958-34DF66813B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B976B036-45FE-4537-B958-34DF66813B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B976B036-45FE-4537-B958-34DF66813B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA555A5D-0183-4D7E-9DB7-493E2495B1AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA555A5D-0183-4D7E-9DB7-493E2495B1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA555A5D-0183-4D7E-9DB7-493E2495B1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA555A5D-0183-4D7E-9DB7-493E2495B1AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

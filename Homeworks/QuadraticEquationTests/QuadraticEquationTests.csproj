@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HW1 - QuadraticEquation\HW1 - QuadraticEquation.csproj" />
+    <ProjectReference Include="..\QuadraticEquation\QuadraticEquation.csproj" />
   </ItemGroup>
 
 </Project>
