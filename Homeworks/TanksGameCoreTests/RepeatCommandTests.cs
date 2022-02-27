@@ -13,7 +13,7 @@ namespace Tanks_Game_Core___Tests
             CommandExecutor.Instance.ClearLastCompletedCommands();
             ErrorHandler.SetHandler(new EmptyErrorHandler());
 
-            var errorCommand = new MoveCommand(new Transform(), Vector3.One);
+            var errorCommand = new MoveCommand(new GameObject(), Vector3.One);
             RepeatCommand repeatCommand = new RepeatCommand(errorCommand);
             CommandExecutor.Instance.Add(repeatCommand);
 

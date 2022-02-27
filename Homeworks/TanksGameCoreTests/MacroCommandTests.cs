@@ -11,13 +11,14 @@ public class MacroCommandTests
         // Макро команда выполняется до первого исключения
         // Undo макро команды возвращает в изначальное состояние
 
-        Transform transform = new Transform();
+        GameObject gameObject = new GameObject();
+        Transform transform = gameObject.GetComponent<Transform>();
         
         ICommand[] commands = new ICommand[]
         {
-            new MoveCommand(transform, Vector3.One),
+            new MoveCommand(gameObject, Vector3.One),
             new ErrorCommand(),
-            new RotateCommand(transform, Vector3.One)
+            new RotateCommand(gameObject, Vector3.One)
         };
         
         MacroCommand macroCommand = new MacroCommand(commands);

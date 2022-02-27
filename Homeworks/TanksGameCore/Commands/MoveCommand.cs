@@ -4,23 +4,26 @@ namespace Tanks_Game_Core
 {
     public class MoveCommand : ICommand
 	{
-		public readonly IMovable Movable;
+		public readonly GameObject GameObject;
 		public readonly Vector3 Direction;
 
-        public MoveCommand(IMovable movable, Vector3 direction)
+		private Transform transform;
+
+        public MoveCommand(GameObject gameObject, Vector3 direction)
 		{
-			this.Movable = movable;
+			this.GameObject = gameObject;
 			this.Direction = direction;
+			this.transform = gameObject.GetComponent<Transform>();
 		}
 
 		public void Execute()
 		{
-			Movable.Position += Direction;
+			transform.Position += Direction;
 		}
 
         public void Undo()
         {
-			Movable.Position -= Direction;
+			transform.Position -= Direction;
 		}
     }
 }

@@ -20,7 +20,7 @@ namespace Tanks_Game_Core___Tests
             tankTransform.Rotation = new Vector3(12, 5, 0);
             Vector3 RotationAngle = new Vector3(-7, 3, 0);
 
-            ICommand rotateCommand = new RotateCommand(tankTransform, RotationAngle);
+            ICommand rotateCommand = new RotateCommand(tank, RotationAngle);
             rotateCommand.Execute();
 
             Assert.That(tankTransform.Rotation, Is.EqualTo(new Vector3(5, 8, 0)));
@@ -36,7 +36,7 @@ namespace Tanks_Game_Core___Tests
             Transform tankTransform = tank.GetComponent<Transform>();
             Vector3 RotationAngle = new Vector3(-7, 3, 0);
 
-            ICommand rotateCommand = new RotateCommand(tankTransform, RotationAngle);
+            ICommand rotateCommand = new RotateCommand(tank, RotationAngle);
 
             Assert.Throws<NullReferenceException>(() => rotateCommand.Execute());
             Assert.Throws<NullReferenceException>(() => tankTransform.Rotation = new Vector3(12, 5, 0));
@@ -64,7 +64,7 @@ namespace Tanks_Game_Core___Tests
 
             foreach (Vector3 nanVector in nanVectors)
             {
-                RotateCommand rotateCommand = new RotateCommand(tankTransform, nanVector);
+                RotateCommand rotateCommand = new RotateCommand(tank, nanVector);
                 Assert.Throws<ArgumentOutOfRangeException>(() => rotateCommand.Execute());
                 Assert.Throws<ArgumentOutOfRangeException>(() => tankTransform.Rotation = nanVector);
             }

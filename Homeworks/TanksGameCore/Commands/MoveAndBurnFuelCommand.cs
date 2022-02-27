@@ -4,10 +4,10 @@ using Tanks_Game_Core;
 public class MoveAndBurnFuelCommand : ICommand
 {
     public readonly GameObject GameObject;
-    
+    public readonly Vector3 Direction;
+
     private Fuel fuel;
     private Transform transform;
-    private Vector3 direction;
 
     private ICommand[] commands;
     private MacroCommand macroCommand;
@@ -15,7 +15,7 @@ public class MoveAndBurnFuelCommand : ICommand
     public MoveAndBurnFuelCommand(GameObject gameObject, Vector3 direction)
     {
         this.GameObject = gameObject;
-        this.direction = direction;
+        this.Direction = direction;
         this.fuel = gameObject.GetComponent<Fuel>();
         this.transform = gameObject.GetComponent<Transform>();
         createCommandsList();
@@ -34,7 +34,7 @@ public class MoveAndBurnFuelCommand : ICommand
         {
             new CheckFuelCommand(fuel),
             new BurnFuelCommand(fuel),
-            new MoveCommand(transform, direction)
+            new MoveCommand(GameObject, Direction)
         };
     }
 }

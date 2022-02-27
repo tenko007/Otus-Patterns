@@ -4,23 +4,26 @@ namespace Tanks_Game_Core
 {
     public class RotateCommand : ICommand
 	{
-		public readonly IRotatable Rotable;
+		public readonly GameObject GameObject;
 		public readonly Vector3 RotateAngle;
 
-		public RotateCommand(IRotatable rotable, Vector3 rotateAngle)
+		private Transform transform;
+
+		public RotateCommand(GameObject gameObject, Vector3 rotateAngle)
 		{
-			this.Rotable = rotable;
+			this.GameObject = gameObject;
 			this.RotateAngle = rotateAngle;
+			this.transform = gameObject.GetComponent<Transform>();
 		}
 
         public void Execute()
         {
-            Rotable.Rotation += RotateAngle;
+            transform.Rotation += RotateAngle;
         }
 
         public void Undo()
         {
-            Rotable.Rotation -= RotateAngle;
+            transform.Rotation -= RotateAngle;
         }
     }
 }

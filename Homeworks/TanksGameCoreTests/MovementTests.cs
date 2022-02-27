@@ -21,7 +21,7 @@ namespace Tanks_Game_Core___Tests
             tankTransform.Position = new Vector3(12, 5, 0);
             Vector3 velocity = new Vector3(-7, 3, 0);
 
-            ICommand moveCommand = new MoveCommand(tankTransform, velocity);
+            ICommand moveCommand = new MoveCommand(tank, velocity);
             moveCommand.Execute();
 
             Assert.That(tankTransform.Position, Is.EqualTo(new Vector3(5, 8, 0)));
@@ -37,7 +37,7 @@ namespace Tanks_Game_Core___Tests
             Transform tankTransform = tank.GetComponent<Transform>();
             Vector3 velocity = new Vector3(-7, 3, 0);
 
-            ICommand moveCommand = new MoveCommand(tankTransform, velocity);
+            ICommand moveCommand = new MoveCommand(tank, velocity);
 
             Assert.Throws<NullReferenceException>(() => moveCommand.Execute());
             Assert.Throws<NullReferenceException>(() => tankTransform.Position = new Vector3(12, 5, 0));
@@ -65,7 +65,7 @@ namespace Tanks_Game_Core___Tests
 
             foreach (Vector3 nanVector in nanVectors)
             {
-                MoveCommand moveCommand = new MoveCommand(tankTransform, nanVector);
+                MoveCommand moveCommand = new MoveCommand(tank, nanVector);
                 Assert.Throws<ArgumentOutOfRangeException>(() => moveCommand.Execute());
                 Assert.Throws<ArgumentOutOfRangeException>(() => tankTransform.Position = nanVector);
             }

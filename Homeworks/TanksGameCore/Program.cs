@@ -13,7 +13,7 @@ namespace Tanks_Game_Core
             ErrorCommand errorCommand = new ErrorCommand();
             
             CommandExecutor.Instance.Add(errorCommand);
-            CommandExecutor.Instance.Add(new MoveCommand(new Transform(), Vector3.One));
+            CommandExecutor.Instance.Add(new MoveCommand(new GameObject(), Vector3.One));
 
             var commandsArray = CommandExecutor.Instance.GetLastCompletedCommands();
             Console.WriteLine($"{Directory.GetCurrentDirectory()}");
