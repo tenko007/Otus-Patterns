@@ -12,6 +12,7 @@ public class MacroCommandTests
         // Undo макро команды возвращает в изначальное состояние
 
         GameObject gameObject = new GameObject();
+        gameObject.AddComponent(new Transform());
         Transform transform = gameObject.GetComponent<Transform>();
         
         ICommand[] commands = new ICommand[]
